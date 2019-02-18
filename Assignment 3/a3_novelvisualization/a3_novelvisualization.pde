@@ -6,15 +6,15 @@ float word_width;
 float xpos, ypos;
 
 color[] colors = {
-  color(10, 9, 59),    // navy, 0
-  color(28, 26, 89),   // indigo, 1
-  color(129, 127, 178) // lavender, 2
+  color(124, 0, 0), // blood red  0
+  color(186, 0, 0), // rose red   1
+  color(248, 0, 0)  // bright red 2
 };
 
 void setup() {
   background(255);
   size(700, 600);
-  PFont font = createFont("Microsoft YaHei", 32);
+  PFont font = createFont("Helvetica", 32);
   textFont(font);
   String[] words = loadStrings("uniquewords.txt");
   
