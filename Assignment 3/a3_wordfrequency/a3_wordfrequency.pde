@@ -12,7 +12,7 @@ void setup(){
 
 void draw(){
  for (int i = 0 ; i < s.length; i++) {
-    String [] vals = split(s,": ");
+    String [] vals = split(s[i], ": ");
     rect(0, newY, float(vals[1])/10, 10);
     newY += 10;
   }  
