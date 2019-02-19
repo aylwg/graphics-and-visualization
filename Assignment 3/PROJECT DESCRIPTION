@@ -20,4 +20,7 @@ The file also contains a wordle word cloud that visually represents the entire D
 The team struggled the most with python, considering we had to relearn the language. We also had some challenge reading in the strings,
 but once we figured that out, the rest of the assignment came easier. 1234
 
-
+Most of the code was worked on by all memebers, however, the following individuals were responsible for a majority of the following code:
+extract_words.py by Katherine Dunham
+a3_novelvisualization.pde by Audrey Wang
+a3_wordfrequency.pde by Lorena Reyes
