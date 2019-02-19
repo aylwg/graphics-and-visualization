@@ -1,0 +1,26 @@
+PROJECT DESCRIPTION - Assignment 3
+
+This project uses python file extract_words.py to read a txt version of Dracula. The code iterates through each line and, creating distinct dicionaries
+that later output allwords.txt, wordfrequency.txt and uniquewords.txt.
+
+allwords.txt stores all words in the text in a seperate line.
+wordfrequency.txt stores a the number words with a particular frequency.
+uniquewords.txt stores words that only appear in the text once.
+
+All words are in lowercase and stripped of periods, commas and parenthesis.
+
+a3_wordfrequency.pde creates uses squares to create a stacked piramid using the frequency/10 for the width of each layer. This way,
+we visually demonstrate how many words have particular frequencies in an interesting and creative way.
+
+a3_novelvisualization.pde makes reads in the uniquewords.txt file and fills a canvas with words, interchanging with different
+text formating to create a visually appealing image.
+
+The file also contains a wordle word cloud that visually represents the entire Dracula text.
+
+The team struggled the most with python, considering we had to relearn the language. We also had some challenge reading in the strings,
+but once we figured that out, the rest of the assignment came easier. 1234
+
+Most of the code was worked on by all memebers, however, the following individuals were responsible for a majority of the following code:
+extract_words.py by Katherine Dunham
+a3_novelvisualization.pde by Audrey Wang
+a3_wordfrequency.pde by Lorena Reyes
