@@ -1,4 +1,4 @@
-PShape hand, stem1, stem2, stem2Flower, stem3FlowerCenter, stem3FlowerPetalC;
+PShape hand, stem1, stem2, stem3FlowerCenter, stem3FlowerPetalC;
 PShape stem3FlowerPetalL, stem3FlowerPetalR, stem3Leaf, stem3;
 
 void setup(){
@@ -6,26 +6,24 @@ void setup(){
   hand = loadShape("flower_svg/hand.svg");
   stem1 = loadShape("flower_svg/stem1.svg");
   stem2 = loadShape("flower_svg/stem2.svg");
-  stem2Flower = loadShape("flower_svg/stem2-flower.svg");
   stem3 = loadShape("flower_svg/stem3.svg");
   stem3FlowerCenter = loadShape ("flower_svg/stem3-flower-center.svg");
   stem3FlowerPetalC = loadShape ("flower_svg/stem3-flower-petalC.svg");
   stem3FlowerPetalL = loadShape ("flower_svg/stem3-flower-petalL.svg");
-  stem3FlowerPetalR = loadShape ("flower_svg/stem3-flower.petalR.svg");
+  stem3FlowerPetalR = loadShape ("flower_svg/stem3-flower-petalR.svg");
   stem3Leaf = loadShape ("flower_svg/stem3-leaf.svg");
 }
 void draw (){
   background(215,241,244);
-  shape(hand,310,671.613);
-  shape(stem1,564.058,458.006);
-  shape(stem2,568.504,489.338);
-  shape(stem3,554.584,287.81);
-  shape(stem2Flower, 621.829,408.349);
-  shape(stem3Leaf,333.937,309.047);
-  shape(stem3FlowerCenter,536.499,256.607);
-  shape(stem3FlowerPetalL,405.234,223.393);
-  shape(stem3FlowerPetalR,539.036,87);
-  shape(stem3FlowerPetalC, 398.334,105.166);
+  shape(hand,148.095,314.483);
+  shape(stem1,262.596,218.626);
+  shape(stem2,264.592,196.334);
+  shape(stem3,258.343,142.222);
+  shape(stem3Leaf,159.29,159.29);
+  shape(stem3FlowerCenter,250.224,128.215);
+  shape(stem3FlowerPetalL,191.297,113.304);
+  shape(stem3FlowerPetalR,251.363,52.075);
+  shape(stem3FlowerPetalC, 188.199,60.23);
   
   
 }
