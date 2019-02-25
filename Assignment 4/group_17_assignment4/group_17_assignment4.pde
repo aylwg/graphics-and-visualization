@@ -23,7 +23,7 @@ void setup(){
 void draw (){
   background(215,241,244);
   parent.drawBase();
-  child.drawBase();
+  child.drawChild();
   //shape(hand,148.095,314.483);
   //shape(stem1,262.596,218.626);
   //shape(stem2,264.592,196.334);

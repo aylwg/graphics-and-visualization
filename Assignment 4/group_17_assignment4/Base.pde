@@ -18,8 +18,9 @@ class Base {
   // https://processing.org/tutorials/transform2d/
   void drawChild() {
     pushMatrix();
-    // translate(piv_x, piv_y);
-    // shape(shape, piv_x-x, piv_y-y);
+    translate(piv_x, piv_y);
+    //rotate(radians(225));
+    shape(shape, -(piv_x-x), -(piv_y-y));
     popMatrix();
   }
 }
