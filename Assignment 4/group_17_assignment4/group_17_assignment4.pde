@@ -2,16 +2,18 @@
 //PShape stem3FlowerPetalL, stem3FlowerPetalR, stem3Leaf, stem3;
 
 //Base parent; 
-//Base child;
+Base child;
 PShape hand;
 Hand base;
 PShape stem1;
+Stem first;
 
 void setup(){
   size(500,500);
   hand = loadShape("flower_svg/hand.svg");
   base = new Hand(hand, 148.095, 314.483);
   stem1 = loadShape("flower_svg/stem1.svg");
+  first = new Stem(stem1, 262.596, 218.626, 266.731, 315.416);
   //stem2 = loadShape("flower_svg/stem2.svg");
   //stem3 = loadShape("flower_svg/stem3.svg");
   //stem3FlowerCenter = loadShape ("flower_svg/stem3-flower-center.svg");
@@ -25,6 +27,7 @@ void setup(){
 void draw (){
   background(215,241,244);
   base.display();
+  first.display();
   //child.drawChild();
   //shape(hand,148.095,314.483);
   //shape(stem1,262.596,218.626);

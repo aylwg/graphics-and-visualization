@@ -9,10 +9,16 @@ class Stem extends Hand {
   }
   // https://processing.org/tutorials/transform2d/
   void display() {
+    //super.display();
+    
+    shape = loadShape("flower_svg/stem1.svg");
     pushMatrix();
     translate(piv_x, piv_y);
-    rotate(PI/3.0);
-    shape(shape, -(piv_x-x), -(piv_y-y));
+    //rotate(radians(350));
+    //rotate(radians(0));
+    rotate(radians(10));
+    //rect(x-25, y-100, 50, 100);
+    shape(shape, x-5, y-98);
     popMatrix();
   }
 }
