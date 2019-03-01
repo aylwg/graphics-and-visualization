@@ -2,8 +2,9 @@ PShape hand, stem1, stem2, stem3FlowerCenter, stem3FlowerPetalC;
 PShape stem3FlowerPetalL, stem3FlowerPetalR, stem3Leaf, stem3;
 
 Hand base;
-Stem first;
-Stem second, third, center, leaf, leftpetal, rightpetal, centerpetal;
+Stem1 first;
+Stem2 second; 
+Stem1 third, center, leaf, leftpetal, rightpetal, centerpetal;
 
 void setup(){
   size(500,500);
@@ -11,28 +12,28 @@ void setup(){
   base = new Hand(hand, 148.095, 314.483);
   
   stem1 = loadShape("flower_svg/stem1.svg");
-  first = new Stem(stem1, 262.596, 218.626, 266.731, 315.416);
+  first = new Stem1(stem1, 262.596, 218.626, 266.731, 315.416);
   
   stem2 = loadShape("flower_svg/stem2.svg");
-  second = new Stem(stem2, 264.592, 196.334);
+  second = new Stem2(stem2, 264.592, 196.334);
   
   stem3 = loadShape("flower_svg/stem3.svg");
-  third = new Stem(stem3, 258.343, 142.222);
+  third = new Stem1(stem3, 258.343, 142.222);
   
   stem3Leaf = loadShape("flower_svg/stem3-leaf.svg");
-  leaf = new Stem(stem3Leaf, 159.29, 159.29);
+  leaf = new Stem1(stem3Leaf, 159.29, 159.29);
   
   stem3FlowerCenter = loadShape ("flower_svg/stem3-flower-center.svg");
-  center = new Stem(stem3FlowerCenter, 250.224, 128.215);
+  center = new Stem1(stem3FlowerCenter, 250.224, 128.215);
   
   stem3FlowerPetalC = loadShape ("flower_svg/stem3-flower-petalC.svg");
-  centerpetal = new Stem(stem3FlowerPetalC, 188.199, 60.23);
+  centerpetal = new Stem1(stem3FlowerPetalC, 188.199, 60.23);
   
   stem3FlowerPetalL = loadShape ("flower_svg/stem3-flower-petalL.svg");
-  leftpetal = new Stem(stem3FlowerPetalL, 191.297, 113.304);
+  leftpetal = new Stem1(stem3FlowerPetalL, 191.297, 113.304);
   
   stem3FlowerPetalR = loadShape ("flower_svg/stem3-flower-petalR.svg");
-  rightpetal = new Stem(stem3FlowerPetalR, 251.363, 52.075);
+  rightpetal = new Stem1(stem3FlowerPetalR, 251.363, 52.075);
   
   stem3Leaf = loadShape ("flower_svg/stem3-leaf.svg");
   
