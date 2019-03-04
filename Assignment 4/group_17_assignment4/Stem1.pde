@@ -21,7 +21,7 @@ class Stem1 extends Hand {
     if (piv_x == 0 && piv_y == 0) {
       super.display();
     } else {    
-      shape = loadShape("flower_svg/stem1.svg");
+      shape = loadShape("flower_svg/stem.svg");
       pushMatrix();
       translate(piv_x, piv_y);
       rotate(radians(baseAngle));

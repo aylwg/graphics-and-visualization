@@ -1,67 +1,54 @@
-PShape hand, stem1, stem2, stem3FlowerCenter, stem3FlowerPetalC;
-PShape stem3FlowerPetalL, stem3FlowerPetalR, stem3Leaf, stem3;
+PShape cloud, flower, pinkie, ring, rays2, leaf1, rays1, hand, stem1, sun;
+PShape rightHand, leftHand;
 
-Hand base;
-Stem1 first;
-Stem2 second; 
-Stem1 third, center, leaf, leftpetal, rightpetal, centerpetal;
+Hand base, base2, base3;
+Flower leftFlower, rightFlower;
+Sun sunBody;
+Rays raySpin1, raySpin2;
+Clouds cloud1, cloud2, cloud3;
 
 void setup(){
+  frameRate(30);
   size(500,500);
+  
   hand = loadShape("flower_svg/hand.svg");
-  base = new Hand(hand, 148.095, 314.483);
+  base = new Hand (hand, 167.33, 348.5);
   
-  stem1 = loadShape("flower_svg/stem1.svg");
-  first = new Stem1(stem1, 262.596, 218.626, 266.731, 315.416);
+  rightHand = loadShape("flower_svg/rightHand.svg");
+  base2 = new Hand(rightHand, 253.33, 371.42);
   
-  stem2 = loadShape("flower_svg/stem2.svg");
-  second = new Stem2(stem2, 264.592, 196.334);
+  leftHand = loadShape("flower_svg/leftHand.svg");
+  base3 = new Hand(leftHand, 10, 371.42);
   
-  stem3 = loadShape("flower_svg/stem3.svg");
-  third = new Stem1(stem3, 258.343, 142.222);
+  leftFlower = new Flower("flower_svg/stem.svg", "flower_svg/flowerLeft.svg", 92.7, 300, 99.8, 228.7, -61.84, 25);
+  rightFlower = new Flower("flower_svg/stemRight.svg", "flower_svg/flowerRight2.svg", "flower_svg/leaf.svg", 291.7, 292.8, 291.7, 215.5, -15, 26);
   
-  stem3Leaf = loadShape("flower_svg/stem3-leaf.svg");
-  leaf = new Stem1(stem3Leaf, 159.29, 159.29);
+  sun = loadShape("flower_svg/sun.svg");
+  sunBody = new Sun (sun, 350, 100);
   
-  stem3FlowerCenter = loadShape ("flower_svg/stem3-flower-center.svg");
-  center = new Stem1(stem3FlowerCenter, 250.224, 128.215);
+  rays1 = loadShape("flower_svg/rays1.svg");
+  raySpin1 = new Rays(rays1, 350, 100, 372, 122, true);
   
-  stem3FlowerPetalC = loadShape ("flower_svg/stem3-flower-petalC.svg");
-  centerpetal = new Stem1(stem3FlowerPetalC, 188.199, 60.23);
+  rays2 = loadShape("flower_svg/rays2.svg");
+  raySpin2 = new Rays(rays2, 350, 100, 372, 122, false);
   
-  stem3FlowerPetalL = loadShape ("flower_svg/stem3-flower-petalL.svg");
-  leftpetal = new Stem1(stem3FlowerPetalL, 191.297, 113.304);
+  cloud = loadShape("flower_svg/cloud.svg");
+  cloud1 = new Clouds (cloud, -20, 140, 2);
+  cloud2 = new Clouds (cloud, 180, 20, 3);
+  cloud3 = new Clouds (cloud, 350, 250, 1.5);
   
-  stem3FlowerPetalR = loadShape ("flower_svg/stem3-flower-petalR.svg");
-  rightpetal = new Stem1(stem3FlowerPetalR, 251.363, 52.075);
-  
-  stem3Leaf = loadShape ("flower_svg/stem3-leaf.svg");
-  
-  //test code
-  //parent = new Base(hand, 148.095, 314.483, 0);
-  //child = new Base(stem1, 262.596, 218.626, 0);
 }
 void draw (){
   background(215, 241, 244);
+  sunBody.display();
+  raySpin1.display();
+  raySpin2.display();
+  cloud1.display();
+  cloud2.display();
+  cloud3.display();
   base.display();
-  first.display();
-  second.display();
-  third.display();
-  leaf.display();
-  center.display();
-  leftpetal.display();
-  rightpetal.display();
-  centerpetal.display();
-  
-  //shape(hand,148.095,314.483);
-  //shape(stem1,262.596,218.626);
-  //shape(stem2,264.592,196.334);
-  //shape(stem3,258.343,142.222);
-  //shape(stem3Leaf,159.29,159.29);
-  //shape(stem3FlowerCenter,250.224,128.215);
-  //shape(stem3FlowerPetalL,191.297,113.304);
-  //shape(stem3FlowerPetalR,251.363,52.075);
-  //shape(stem3FlowerPetalC, 188.199,60.23);
-  
-  
+  base2.display();
+  base3.display();
+  leftFlower.display();
+  rightFlower.display();
 }
