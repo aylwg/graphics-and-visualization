@@ -6,7 +6,7 @@ SoundFile file;
 PShape cloud, flower, pinkie, ring, rays2, leaf1, rays1, hand, stem1, sun;
 PShape rightHand, leftHand, sw1, sw2;
 
-Hand base, base2, base3;
+Hand lhand, rhand;
 Flower leftFlower, rightFlower;
 Sun sunBody;
 Rays raySpin1, raySpin2;
@@ -18,14 +18,14 @@ void setup(){
   frameRate(30);
   size(500,500);
   
-  file = new SoundFile(this, "Relaxing Footage Of Flowers Rustling In The Breeze - Free Stock Footage.mp3");
+  file = new SoundFile(this, "sound.mp3");
   file.play();
   
   hand = loadShape("flower_svg/hand.svg");
-  base = new Hand (hand, 10.33, 370.5);
+  lhand = new Hand (hand, 10.33, 370.5);
   
   rightHand = loadShape("flower_svg/rightHand.svg");
-  base2 = new Hand(rightHand, 253.33, 371.42);
+  rhand = new Hand(rightHand, 253.33, 371.42);
   
   leftFlower = new Flower("flower_svg/stem.svg", "flower_svg/flowerLeft.svg", 92.7, 300, 99.8, 228.7, -61.84, 25);
   rightFlower = new Flower("flower_svg/stemRight.svg", "flower_svg/flowerRight2.svg", "flower_svg/leaf.svg", 291.7, 292.8, 291.7, 215.5, -15, 26);
@@ -61,8 +61,8 @@ void draw (){
   cloud3.display();
   f1.display();
   f2.display();
-  base.display();
-  base2.display();
+  lhand.display();
+  rhand.display();
   leftFlower.display();
   rightFlower.display();
   swtr.display();
