@@ -39,7 +39,6 @@ class Flower {
   
   void display() {
     pushMatrix();
-    //translate(sx, sy+stem.height);
     translate(sx, sy+stem.height);
     rotate(radians(baseAngle));
     baseAngle += angleChange;

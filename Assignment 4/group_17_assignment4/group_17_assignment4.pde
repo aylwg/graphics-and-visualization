@@ -1,3 +1,8 @@
+// sound libary source: https://github.com/processing/processing-sound
+// soundfile code: https://processing.org/reference/libraries/sound/SoundFile.html
+import processing.sound.*;
+SoundFile file;
+
 PShape cloud, flower, pinkie, ring, rays2, leaf1, rays1, hand, stem1, sun;
 PShape rightHand, leftHand, sw1, sw2;
 
@@ -12,6 +17,9 @@ Finger f1, f2;
 void setup(){
   frameRate(30);
   size(500,500);
+  
+  file = new SoundFile(this, "Relaxing Footage Of Flowers Rustling In The Breeze - Free Stock Footage.mp3");
+  file.play();
   
   hand = loadShape("flower_svg/hand.svg");
   base = new Hand (hand, 10.33, 370.5);
