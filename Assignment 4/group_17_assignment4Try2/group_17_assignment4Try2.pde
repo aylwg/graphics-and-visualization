@@ -1,10 +1,13 @@
-PShape cloud, flower, pinkie, ring, rays2;
-PShape leaf1, rays1, hand, stem1, sun;
+PShape cloud, flower, pinkie, ring, rays2, leaf1, rays1, hand, stem1, sun;
+
 
 Hand base;
 Stem1 first;
 Stem2 second; 
 Stem1 third, center, leaf, leftpetal, rightpetal, centerpetal;
+Sun sunBody;
+Rays raySpin1, raySpin2;
+Clouds cloud1, cloud2, cloud3;
 
 void setup(){
   size(500,500);
@@ -15,9 +18,29 @@ void setup(){
   stem1 = loadShape("flower_svg/stem.svg");
   first = new Stem1(stem1, 251.18, 100.947, 254.223, 372.106);
   
+  sun = loadShape("flower_svg/sun.svg");
+  sunBody = new Sun (sun, 350, 100);
+  
+  rays1 = loadShape("flower_svg/rays1.svg");
+  raySpin1 = new Rays(rays1, 350, 100, 372, 122, true);
+  
+  rays2 = loadShape("flower_svg/rays2.svg");
+  raySpin2 = new Rays(rays2, 350, 100, 372, 122, false);
+  
+  cloud = loadShape("flower_svg/cloud.svg");
+  cloud1 = new Clouds (cloud, -20, 140, 2);
+  cloud2 = new Clouds (cloud, 180, 20, 3);
+  cloud3 = new Clouds (cloud, 350, 250, 1.5);
+  
 }
 void draw (){
   background(215, 241, 244);
+  sunBody.display();
+  raySpin1.display();
+  raySpin2.display();
+  cloud1.display();
+  cloud2.display();
+  cloud3.display();
   base.display();
   first.display();
   //second.display();
@@ -27,6 +50,7 @@ void draw (){
   //leftpetal.display();
   //rightpetal.display();
   //centerpetal.display();
+  
   
   //shape(hand,148.095,314.483);
   //shape(stem1,262.596,218.626);
