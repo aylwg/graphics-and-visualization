@@ -1,0 +1,23 @@
+CS324E
+Project Description for Assignment 4
+
+The intended animation was a set of hands holding flowers that flow in the wind with an animated background of sunrays. 
+The classes are Clouds, Rays, Sun, Flower, Hand, Finger, and Sweater. 
+The Flower class takes in two image path names as strings, an optional leaf path name, two sets of x and y coordinates corresponding to the top 
+left points of the stem svg and the top left corner of the flower svg, the relative difference of the stem location for each flower 
+(because the drawings had stems that weren't centered in the svg), a float that corresponds to the angle of rotation, and loads the svgs from the pathnames. 
+The stem is displayed and rotated and the flower is displayed and rotated relative to the stem. To confirm that there is rotation around the secondary point, 
+the first rotation for the stem can be commented out, and vice versa. 
+The Sun and Hand classes both take in a PShape, and a corresponding x and y coordinate to display the sun/hand in a certain location. 
+The Finger class extends the Hand class and rotates a finger svg around a pivot point specified. 
+The Sweater class loads shapes from two pathnames, and displays each sweater in the same location based on a counter.
+The Ray class loads svgs as PShapes and rotates them around a sun object. One of the PShapes utilizes scaling to pulse while rotating.
+The Cloud class takes a speed variable to move the clouds across the screen, and wraps around once the cloud completely exits the canvas. 
+Some unexpected challenges were importing svgs properly as they originally loaded as black shapes, and figuring out how to properly 
+translate, rotate, and determine pivot points of rotation. 
+
+Parts:
+Audrey - Flower class, implemented sound file
+Katherine - Sun, Rays, Clouds classes
+Lorena - Hand, Finger, Sweater classes, and created svgs
+
