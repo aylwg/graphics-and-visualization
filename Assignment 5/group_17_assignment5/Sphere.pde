@@ -20,8 +20,10 @@ class Sphere{
   void display(){
     noStroke();
     fill(col);
+    pushMatrix();
     translate(countX,countY,z);
     sphere(size);
+    popMatrix();
     countX +=1;
     countY +=1;
     if (countX > width){
