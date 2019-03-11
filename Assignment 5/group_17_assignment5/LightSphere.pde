@@ -12,8 +12,8 @@ class LightSphere extends Sphere{
   void display(){
     pushMatrix();
     fill(colR,colG,colB);
-    translate(400,y+60,z);
-
+    //translate(400,y+60,z);
+    translate(50, 50, 1);
     if (colR == 255){
       colR = 0;
     } else {
@@ -32,7 +32,8 @@ class LightSphere extends Sphere{
       colB += 1;
     }
 
-   sphere(50);
+   //sphere(50);
+   super.display();
    popMatrix();
     
     

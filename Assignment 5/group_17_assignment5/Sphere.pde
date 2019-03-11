@@ -19,10 +19,11 @@ class Sphere{
   }
   void display(){
     noStroke();
-    fill(col);
+    //fill(col);
     pushMatrix();
     translate(countX,countY,z);
     sphere(size);
+    //translate(-countX, -countY, -z);
     popMatrix();
     countX +=1;
     countY +=1;
