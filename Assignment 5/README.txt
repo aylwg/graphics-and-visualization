@@ -1,4 +1,4 @@
-README
+README for group_17_assignment5.pde 
 
 open the group_17_assignment5.pde and click 'run'. 
 make sure the mouse isn't hovering over the display to see all objects 
