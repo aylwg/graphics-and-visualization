@@ -1,3 +1,5 @@
+Project Description for group_17_assignment5.pde 
+
 project description text file that summarizes what the intended animation was, 
 what the included classes do, and any unexpected challenges. 
 That is, this is mostly a rehash of the progress report 
