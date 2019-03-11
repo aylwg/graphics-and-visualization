@@ -8,3 +8,7 @@ While group coding is allowed, each member is responsible for their individual p
 
 Lorena worked on sphere classes. The class animates spheres to move from top left corner to bottom right corner of the canvas. Subclasses add more animations such as rotation and color change.
 The most dificult part to achieve was pushing and popping matrix in order to display within picture frame.
+
+Pyramid classes - Pyramid displays a pyramid, RotatePyramid rotates based on an incrementing angle which modifies the X- and Y-axes 
+and also uses the display function from base Pyramid class, MovePyramid takes the moving pyramid from RotatePyramid and
+rotates based on MouseX movement which changes the X-axis. 
