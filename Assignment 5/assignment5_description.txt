@@ -5,3 +5,6 @@ but from the position of what you accomplished rather than what you were plannin
 Also document which group member worked on which part of the assignment. 
 While group coding is allowed, each member is responsible for their individual parts 
 -- this ensures all group members are participating and have mastery of the assignment.
+
+Lorena worked on sphere classes. The class animates spheres to move from top left corner to bottom right corner of the canvas. Subclasses add more animations such as rotation and color change.
+The most dificult part to achieve was pushing and popping matrix in order to display within picture frame.
