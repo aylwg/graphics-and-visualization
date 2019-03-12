@@ -1,16 +1,7 @@
 Project Description for group_17_assignment5.pde 
 
-project description text file that summarizes what the intended animation was, 
-what the included classes do, and any unexpected challenges. 
-That is, this is mostly a rehash of the progress report 
-but from the position of what you accomplished rather than what you were planning. 
-Also document which group member worked on which part of the assignment. 
-While group coding is allowed, each member is responsible for their individual parts 
--- this ensures all group members are participating and have mastery of the assignment.
+Lorena worked on sphere classes. The class animates spheres to move from top left corner to bottom right corner of the canvas. Subclasses add more animations such as rotation and color change. The most dificult part to achieve was pushing and popping matrix in order to display within picture frame.
 
-Lorena worked on sphere classes. The class animates spheres to move from top left corner to bottom right corner of the canvas. Subclasses add more animations such as rotation and color change.
-The most dificult part to achieve was pushing and popping matrix in order to display within picture frame.
+Pyramid classes by Audrey - Pyramid displays a pyramid, RotatePyramid rotates based on an incrementing angle which modifies the X- and Y-axes and also uses the display function from base Pyramid class, MovePyramid takes the moving pyramid from RotatePyramid and rotates based on MouseX movement which changes the X-axis. 
 
-Pyramid classes - Pyramid displays a pyramid, RotatePyramid rotates based on an incrementing angle which modifies the X- and Y-axes 
-and also uses the display function from base Pyramid class, MovePyramid takes the moving pyramid from RotatePyramid and
-rotates based on MouseX movement which changes the X-axis. 
+Katherine did the Box classes. The base class takes in XYZ position variables along with speed, size, and distance to animate the boxes as floating. The SpinBox class is an extention of the Box class that allows the Box to spin on all 3 axes based on spin speed given. It uses only one variable for simplicity.
