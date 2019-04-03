@@ -7,11 +7,21 @@ class Firework{
    Firework(int num) {
      particles = new ArrayList<Particle>();   // Initialize the arraylist
      rand = int(random(0, 360));
-     for (int i = 0; i < num; i++) {
-       float xStart = random(-0.1, 0.1);
-       Particle p = new Particle(mouseX, mouseY, xStart, -2.5, 2.0, rand);
-       p.applyForces(0, 1);
-       particles.add(p);  // Add "num" amount of particles to the arraylist
+     if (int(random(0, 2)) == 0) {
+       for (int i = 0; i < num; i++) {
+         float xStart = random(-0.1, 0.1);
+         Particle p = new Particle(mouseX, mouseY, xStart, -2.5, 2.0, rand);
+         p.applyForces(0, 1);
+         particles.add(p);  // Add "num" amount of particles to the arraylist
+       }
+     } 
+     else {
+       for (int i = 0; i < num; i++) {
+         float xStart = random(-0.1, 0.1);
+         Particle p = new Particle(mouseX, mouseY, xStart, -4, 1.0, rand);
+         p.applyForces(0, 1);
+         particles.add(p);  // Add "num" amount of particles to the arraylist
+       }
      }
    }
    
