@@ -5,4 +5,6 @@ Audrey wrote the Particle class and the methods and physics of the particles cre
 Katherine wrote the Firework class and editted the Particle class physics in order to make it look closer to actual Fireworks.
 The fireworks are interactable as they are created when the mouse is pressed.
 
-Lorena wrote the Spark class which creates bouncing stars using gravity physics.
+Lorena wrote the Spark class which creates bouncing stars using gravity and friction.
+
+Creating the actions to start on mouseClicked was particulatly tricky, but was eventually fixed when debugging. 
