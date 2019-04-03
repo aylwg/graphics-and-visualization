@@ -17,7 +17,7 @@ void setup() {
 }
 
 void mousePressed() {
-  numParts = Math.round(random(50,70));
+  numParts = Math.round(random(70,100));
   systems.add(new Firework(numParts));
 }
 
