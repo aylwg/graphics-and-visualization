@@ -1,3 +1,4 @@
+/*
 // Daniel Shiffman
 // http://codingtra.in
 // http://patreon.com/codingtrain
@@ -64,4 +65,8 @@ class Snake {
     }
     rect(x, y, scl, scl);
   }
+
+*/
+class Snake{
+
 }
