@@ -1,63 +1,3 @@
-/*
-// Daniel Shiffman
-// http://codingtra.in
-// http://patreon.com/codingtrain
-// Code for: https://youtu.be/AaGK-fj-BAM
-
-Snake s;
-int scl = 20;
-
-PVector food;
-
-void setup() {
-  size(600, 600);
-  s = new Snake();
-  frameRate(10);
-  pickLocation();
-}
-
-void pickLocation() {
-  int cols = width/scl;
-  int rows = height/scl;
-  food = new PVector(floor(random(cols)), floor(random(rows)));
-  food.mult(scl);
-}
-
-void mousePressed() {
-  s.total++;
-}
-
-void draw() {
-  background(51);
-
-  if (s.eat(food)) {
-    pickLocation();
-  }
-  s.death();
-  s.update();
-  s.show();
-
-
-  fill(255, 0, 100);
-  rect(food.x, food.y, scl, scl);
-}
-
-
-
-
-
-void keyPressed() {
-  if (keyCode == UP) {
-    s.dir(0, -1);
-  } else if (keyCode == DOWN) {
-    s.dir(0, 1);
-  } else if (keyCode == RIGHT) {
-    s.dir(1, 0);
-  } else if (keyCode == LEFT) {
-    s.dir(-1, 0);
-  }
-
-*/
 Snake snake;
 int score = 3;
 String win = "Congratulations, you won!";
@@ -69,6 +9,8 @@ int rectSize = 90;
 color rectColor, rectHighlight;
 color currentColor;
 boolean rectOver = false;
+int scale = 20;
+PVector dots;
 
 void setup() {
   size(700, 700);
@@ -84,35 +26,40 @@ void setup() {
   //red += 1 point
   
   snake = new Snake();
-  
+  randLocation();
 }
 
 void keyPressed() {
    if (key == CODED) {
     if (keyCode == UP) {
-      score += 1;
+      //score += 1;
+      snake.direction(0, -1);
     }
     else if (keyCode == DOWN){
-      score -=1;
+      //score -=1;
+      snake.direction(0, 1);
     }
     else if (keyCode == LEFT){
+      snake.direction(-1, 0);
     }
     else if (keyCode == RIGHT){
+      snake.direction(1, 0);
     }
   }
 }
 
 void draw(){
   background(0);
+  frameRate(10);
   textSize(30);
   fill(250);
   text("Score = "+ score ,10,30);
-  if (score == 0){
+  if (score <= 0){
     text(lose, 30,500);
     text("Thanks for playing", 30,550);
 
   }
-  else if  (score == 20){
+  else if  (score >= 20){
     text(win, 30,500);
     text("Thanks for playing", 30,550);
 
@@ -130,6 +77,17 @@ void draw(){
     noStroke();
     fill(#f442bf);
     text("Play",rectX,rectY+40);
+  }
+  if(!firstPlay) {
+    if (snake.extend(dots)) {
+      randLocation();
+    }
+    snake.end();
+    snake.update();
+    snake.display();
+    
+    fill(255, 0, 100);
+    rect(dots.x, dots.y, scale, scale);
   }
 }
 
@@ -154,6 +112,13 @@ boolean overRect(int x, int y, int width, int height)  {
   } else {
     return false;
   }
+}
+
+void randLocation() {
+  int col = width/scale;
+  int row = height/scale;
+  dots = new PVector(floor(random(col)), floor(random(row)));
+  dots.mult(scale);
 }
 
 // button code edited from https://processing.org/examples/button.html
