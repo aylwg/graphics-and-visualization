@@ -1,1 +1,10 @@
+Our game is based on the classic "Snake" game, with some changes. Players control a snake using the arrow keys and try to pick up green dots to grow and 
+increase their score, while avoiding red dots which will decrease their score. Although implemented, the size of the snake will never decrease except when 
+restarting the game. Players can wrap around the screen by exiting any of sides, but at the cost of losing a point on their score. Players start at 3 points, 
+win at 20 points, and lose at 0 points. The snake class is the only class we used, but it controls all aspects of the snake, including movement and collecting
+points. 
 
+Audrey did
+Lorena did
+Katherine primarily polished the code, including formatting the graphics and debugging, along with the quit button and getting the point system to work as 
+planned.
