@@ -15,8 +15,15 @@ class Snake{
   boolean extend(PVector pos){
     float d = dist(x, y, pos.x, pos.y);
     if (d < 1) {
-      total++;
-      return true;
+      if(pos.z == 20){
+        total++;
+        score++;
+        return true;
+      }
+      else{
+        score--;
+        return true;        
+      }
     }
     return false;
   }
@@ -26,13 +33,14 @@ class Snake{
     yspeed = y;
   }
   
+  //code to reset snake length
   void end() {
     for (int i = 0; i < body.size(); i++) {
       PVector pos = body.get(i);
       float d = dist(x, y, pos.x, pos.y);
       if (d < 1) {
-        total = 0;
-        body.clear();
+        //total = 0;
+        //body.clear();
       }
     }
   }
@@ -55,13 +63,17 @@ class Snake{
       rect(v.x, v.y, scale, scale);
     }
     if (x < 0) {
-      x = width;
-    } else if (x > width) {
+      x = width-20;
+      score -=1;
+    } else if (x > width-20) {
       x = 0;
+      score -=1;
     } else if (y < 0) {
-      y = height;
-    } else if (y > height) {
+      y = height-20;
+      score -=1;
+    } else if (y > height-20) {
       y = 0;
+      score -=1;
     }
     rect(x, y, scale, scale);
   }
