@@ -4,7 +4,6 @@ restarting the game. Players can wrap around the screen by exiting any of sides,
 win at 20 points, and lose at 0 points. The snake class is the only class we used, but it controls all aspects of the snake, including movement and collecting
 points. 
 
-Audrey did
-Lorena did
-Katherine primarily polished the code, including formatting the graphics and debugging, along with the quit button and getting the point system to work as 
-planned.
+Audrey created the snake and made it interactive. 
+Lorena did created the scoreboard system, the starting mode as well as the end mode.
+Katherine primarily polished the code, including formatting the graphics and debugging, along with the quit button and getting the point system to work as planned.
